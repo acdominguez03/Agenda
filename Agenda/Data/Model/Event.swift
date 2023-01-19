@@ -7,12 +7,23 @@
 
 import Foundation
 
-class Event: Identifiable,Decodable{
+class EventResponseModel: Decodable{
     
     let name: String?
-    let date: Int?
+    let date: Double?
     
-    init(name: String, date: Int){
+    init(name: String, date: Double){
+        self.name = name
+        self.date = date
+    }
+}
+
+class Event{
+    
+    let name: String
+    let date: Double
+    
+    init(name: String, date: Double){
         self.name = name
         self.date = date
     }

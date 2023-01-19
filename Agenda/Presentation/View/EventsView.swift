@@ -72,8 +72,8 @@ struct EventsView_Previews: PreviewProvider {
     }
 }
 
-func datetimeToString(date: Int)-> String{
-    let date = Date(timeIntervalSince1970: Double(date) / 1000.0)
+func datetimeToString(date: Double)-> String{
+    let date = Date(timeIntervalSince1970: date / 1000.0)
     let dateFormatter = DateFormatter()
     dateFormatter.timeZone = TimeZone(abbreviation: "GMT +1")
     dateFormatter.locale = NSLocale.current

@@ -16,21 +16,21 @@ class EventViewModel: ObservableObject {
             if let error = error {
                 print(error.localizedDescription)
             }else if let data = data, let response = response as? HTTPURLResponse{
-                print(response.statusCode)
-                print(String(bytes: data, encoding: .utf8))
-                
                 do {
-                    let events = try JSONDecoder().decode([Event?].self, from: data)
-                    self.events = events
+                    let eventsNotFiltered = try JSONDecoder().decode([EventResponseModel?].self, from: data)
+                    
+                    self.events = eventsNotFiltered.compactMap({
+                        guard let date = $0?.date else {return nil}
+                            return Event(name: $0?.name ?? "Nombre no encontrado", date: date)
+                    })
                 } catch {
                     print(error.localizedDescription)
                 }
             }
         }
-        
     }
     
-    func setNewEvent(name: String, date: Int) {
+    func setNewEvent(name: String, date: Double) {
         let url = URL(string: "https://superapi.netlify.app/api/db/eventos")
         let httpBody: [String : Any] = ["name": name, "date": date]
         let finalBody = try? JSONSerialization.data(withJSONObject: httpBody)

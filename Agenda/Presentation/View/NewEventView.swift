@@ -22,12 +22,13 @@ struct NewEventView: View {
                     .padding()
             
             DatePicker("Select Date", selection: $selectedDate)
-                              .padding(.horizontal)
+                .datePickerStyle(.graphical)
+                .padding(.horizontal)
             
             Button {
                 let someDate = selectedDate
                 let timeInterval = someDate.timeIntervalSince1970
-                let finalDate = Int(timeInterval) * 1000
+                let finalDate = Double(Int(timeInterval) * 1000)
                 
                 eventViewModel.setNewEvent(name: nameEvent, date: finalDate)
                 events.append(Event(name: nameEvent, date: finalDate))
@@ -50,7 +51,7 @@ struct NewEventView: View {
 
 //struct NewEventView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        NewEventView(events: [Event(name: "Hola", date: 126476230000)])
-//    }
+//        NewEventView(events: Event(name: "Hola", date: 126476230000))
+//   }
 //}
 

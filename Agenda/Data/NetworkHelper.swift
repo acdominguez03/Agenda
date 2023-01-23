@@ -38,7 +38,11 @@ class NetworkHelper {
         
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        requestApi(request: request,completion: completion)
+        requestApi(request: request) { data,response,error in
+            DispatchQueue.main.async {
+                completion(data,response,error)
+            }
+        }
         
     }
 }

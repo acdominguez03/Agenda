@@ -10,38 +10,27 @@ import SwiftUI
 struct EventsView: View {
     
     @ObservedObject var eventViewModel = EventViewModel()
-    @State private var events: [Event?] = []
     @State private var showNewEventView: Bool = false
     
     var body: some View {
         NavigationView{
             ZStack(alignment: .bottomTrailing){
-                List{
-                    ForEach(eventViewModel.events, id: \.?.name) { event in
-                        HStack{
-                            if(event == nil){
-                                Text("Evento no encontrado")
-                                    .font(.system(size: 15))
-                                    .foregroundColor(.black)
-                            }else{
-                                Text("\(event?.name ?? "")")
-                                    .font(.system(size: 15))
-                                    .foregroundColor(.black)
+                ScrollView {
+                    LazyVStack(spacing: 1) {
+                        ForEach(eventViewModel.events) { event in
+                            HStack {
+                                Text(event.name)
                                 Spacer()
-
-                                Text("\(datetimeToString(date: (event?.date) ?? 0))")
-                                    .font(.system(size: 15))
-                                    .foregroundColor(.black)
-                                
+                                Text("\(datetimeToString(date: event.date))")
                             }
+                            .padding(.horizontal, 5)
+                            .frame(height: 40)
+                            .background(Color.white)
+                            .padding(.horizontal, 10)
                         }
                     }
                 }
-                .task({
-                    eventViewModel.getEvents()
-                })
-                .listStyle(InsetGroupedListStyle())
-            
+                .padding(.bottom, 5)
                 
                 Button {
                     self.showNewEventView.toggle()
@@ -57,11 +46,17 @@ struct EventsView: View {
                 .clipShape(Circle())
                 .padding()
                 .fullScreenCover(isPresented: $showNewEventView) {
-                    NewEventView(events: $events)
+                    NewEventView(showNewEventView: $showNewEventView){
+                        eventViewModel.getEvents()
+                    }
                 }
             
             }.navigationTitle(Text("Events"))
         }
+        .onAppear{
+            eventViewModel.getEvents()
+        }
+        
         .navigationBarHidden(true)
     }
 }
@@ -72,13 +67,18 @@ struct EventsView_Previews: PreviewProvider {
     }
 }
 
-func datetimeToString(date: Double)-> String{
-    let date = Date(timeIntervalSince1970: date / 1000.0)
+func datetimeToString(date: Int)-> String{
+    var finalDate: Date = Date()
+    if(String(date).count == 10){
+        finalDate = Date(timeIntervalSince1970: Double(date))
+    }else{
+        finalDate = Date(timeIntervalSince1970: Double(date) / 1000.0)
+    }
     let dateFormatter = DateFormatter()
     dateFormatter.timeZone = TimeZone(abbreviation: "GMT +1")
     dateFormatter.locale = NSLocale.current
     dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-    let strDate = dateFormatter.string(from: date)
+    let strDate = dateFormatter.string(from: finalDate)
     return strDate
 }
 

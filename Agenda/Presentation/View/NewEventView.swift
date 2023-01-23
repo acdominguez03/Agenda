@@ -11,10 +11,12 @@ struct NewEventView: View {
     
     @State var selectedDate: Date = Date()
     @State var nameEvent: String = ""
-    @Binding var events: [Event?]
     @StateObject var eventViewModel: EventViewModel = EventViewModel()
+    @Binding var showNewEventView: Bool
     
-    @Environment(\.presentationMode) var presentationMode
+    
+    var completion: () -> ()
+    
     
     var body: some View {
         VStack{
@@ -31,8 +33,7 @@ struct NewEventView: View {
                 let finalDate = Double(Int(timeInterval) * 1000)
                 
                 eventViewModel.setNewEvent(name: nameEvent, date: finalDate)
-                events.append(Event(name: nameEvent, date: finalDate))
-                presentationMode.wrappedValue.dismiss()
+                
             } label: {
                 Text("Add Event")
                     .bold()
@@ -46,12 +47,18 @@ struct NewEventView: View {
             Spacer()
         }
         .background(Color("Background"))
+        .onReceive(eventViewModel.$onSentNewEvent, perform: { newValue in
+            if newValue {
+                completion()
+                showNewEventView = false
+            }
+        })
     }
 }
 
 //struct NewEventView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        NewEventView(events: Event(name: "Hola", date: 126476230000))
+//        NewEventView({})
 //   }
 //}
 

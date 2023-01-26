@@ -17,10 +17,12 @@ struct AuthenticationHeaderView: View {
             Text(title)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
+                .foregroundColor(.white)
             
             Text(subtitle)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
+                .foregroundColor(.white)
         }
         .frame(height: 260)
         .padding(.leading)

@@ -58,7 +58,6 @@ struct RegisterView: View {
                         .clipShape(Capsule())
                         .padding()
                 }
-                .shadow(color: .gray, radius: 10, x: 0, y: 0)
                 .alert(isPresented: $showingAlert) {
                     Alert(title: Text("The passwords are different"), dismissButton: .default(Text("Ok")))
                 }

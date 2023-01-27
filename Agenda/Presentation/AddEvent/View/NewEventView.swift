@@ -9,17 +9,18 @@ import SwiftUI
 
 struct NewEventView: View {
     
+    //MARK: - Variables
     @State var selectedDate: Date = Date()
     @State var nameEvent: String = ""
-    @StateObject var eventViewModel: EventViewModel = EventViewModel()
+    @ObservedObject var viewModel: AddEventViewModel = AddEventViewModel()
     @Binding var showNewEventView: Bool
-    
     
     var completion: () -> ()
     
-    
+    //MARK: - Body
     var body: some View {
         VStack{
+            
             CustomTextField(imageName: "pencil", placeholderText: "Name of the event",text: $nameEvent)
                     .padding()
             
@@ -27,32 +28,37 @@ struct NewEventView: View {
                 .datePickerStyle(.graphical)
                 .padding(.horizontal)
             
-            Button {
-                let someDate = selectedDate
-                let timeInterval = someDate.timeIntervalSince1970
-                let finalDate = Double(Int(timeInterval) * 1000)
-                
-                eventViewModel.setNewEvent(name: nameEvent, date: finalDate)
-                
-            } label: {
-                Text("Add Event")
-                    .bold()
-                    .padding(.horizontal)
-                    .padding(.vertical, 8)
-                    .background(Color(.systemBlue))
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
-            }.padding()
+            addEventButton
             
             Spacer()
         }
         .background(Color("Background"))
-        .onReceive(eventViewModel.$onSentNewEvent, perform: { newValue in
+        .onReceive(viewModel.$onSentNewEvent, perform: { newValue in
             if newValue {
                 completion()
                 showNewEventView = false
             }
         })
+    }
+    
+    //MARK: - Accessory Views
+    var addEventButton: some View{
+        Button {
+            let someDate = selectedDate
+            let timeInterval = someDate.timeIntervalSince1970
+            let finalDate = Double(Int(timeInterval) * 1000)
+            
+            viewModel.setNewEvent(name: nameEvent, date: finalDate)
+            
+        } label: {
+            Text("Add Event")
+                .bold()
+                .padding(.horizontal)
+                .padding(.vertical, 8)
+                .background(Color(.systemBlue))
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+        }.padding()
     }
 }
 

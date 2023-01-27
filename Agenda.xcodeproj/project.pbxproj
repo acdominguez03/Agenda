@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334FCF7729842781000DF40F /* EventPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF7629842781000DF40F /* EventPresentationModel.swift */; };
+		334FCF7B298427BE000DF40F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF7A298427BE000DF40F /* LoginViewModel.swift */; };
+		334FCF7D29842813000DF40F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF7C29842813000DF40F /* RegisterViewModel.swift */; };
+		334FCF7F2984289C000DF40F /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF7E2984289C000DF40F /* AddEventViewModel.swift */; };
+		334FCF8129842978000DF40F /* EventsView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF8029842978000DF40F /* EventsView-ViewModel.swift */; };
 		33702CAC29772EBE006F564C /* AgendaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CAB29772EBE006F564C /* AgendaApp.swift */; };
 		33702CB029772EC0006F564C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33702CAF29772EC0006F564C /* Assets.xcassets */; };
 		33702CB329772EC0006F564C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33702CB229772EC0006F564C /* Preview Assets.xcassets */; };
 		33702CC129772F7F006F564C /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CC029772F7F006F564C /* NetworkHelper.swift */; };
-		33702CC329772F95006F564C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CC229772F95006F564C /* Event.swift */; };
-		33702CC529772FB5006F564C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CC429772FB5006F564C /* AuthenticationViewModel.swift */; };
-		33702CC729772FD0006F564C /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CC629772FD0006F564C /* EventViewModel.swift */; };
+		33702CC329772F95006F564C /* EventResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CC229772F95006F564C /* EventResponseModel.swift */; };
 		33702CC929772FEC006F564C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CC829772FEC006F564C /* LoginView.swift */; };
 		33702CCB29773009006F564C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CCA29773009006F564C /* RegisterView.swift */; };
 		33702CCD2977301A006F564C /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CCC2977301A006F564C /* EventsView.swift */; };
@@ -24,14 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334FCF7629842781000DF40F /* EventPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresentationModel.swift; sourceTree = "<group>"; };
+		334FCF7A298427BE000DF40F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		334FCF7C29842813000DF40F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		334FCF7E2984289C000DF40F /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+		334FCF8029842978000DF40F /* EventsView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventsView-ViewModel.swift"; sourceTree = "<group>"; };
 		33702CA829772EBE006F564C /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33702CAB29772EBE006F564C /* AgendaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaApp.swift; sourceTree = "<group>"; };
 		33702CAF29772EC0006F564C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33702CB229772EC0006F564C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33702CC029772F7F006F564C /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
-		33702CC229772F95006F564C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		33702CC429772FB5006F564C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		33702CC629772FD0006F564C /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		33702CC229772F95006F564C /* EventResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponseModel.swift; sourceTree = "<group>"; };
 		33702CC829772FEC006F564C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		33702CCA29773009006F564C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		33702CCC2977301A006F564C /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
@@ -52,6 +58,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334FCF69298426B5000DF40F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				33702CBE29772F6C006F564C /* ViewModel */,
+				33702CBD29772F65006F564C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		334FCF6A298426C7000DF40F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		334FCF6B298426D6000DF40F /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF7429842741000DF40F /* ViewModel */,
+				334FCF732984273A000DF40F /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		334FCF6C298426DD000DF40F /* AddEvent */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF7129842715000DF40F /* ViewModel */,
+				334FCF7029842711000DF40F /* View */,
+			);
+			path = AddEvent;
+			sourceTree = "<group>";
+		};
+		334FCF6D298426E3000DF40F /* EventsList */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF6F2984270B000DF40F /* ViewModel */,
+				334FCF6E298426FF000DF40F /* View */,
+			);
+			path = EventsList;
+			sourceTree = "<group>";
+		};
+		334FCF6E298426FF000DF40F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33702CCC2977301A006F564C /* EventsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		334FCF6F2984270B000DF40F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF8029842978000DF40F /* EventsView-ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		334FCF7029842711000DF40F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33702CCE29773039006F564C /* NewEventView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		334FCF7129842715000DF40F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF7E2984289C000DF40F /* AddEventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		334FCF732984273A000DF40F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33702CCA29773009006F564C /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		334FCF7429842741000DF40F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF7C29842813000DF40F /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		334FCF752984275E000DF40F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF7629842781000DF40F /* EventPresentationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		33702C9F29772EBE006F564C = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +176,8 @@
 		33702CAA29772EBE006F564C /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				334FCF6A298426C7000DF40F /* Domain */,
 				33702CBC29772F5E006F564C /* Presentation */,
-				33702CBB29772F53006F564C /* Domain */,
 				33702CBA29772F36006F564C /* Data */,
 				33702CB929772F27006F564C /* Components */,
 				33702CAB29772EBE006F564C /* AgendaApp.swift */,
@@ -109,18 +214,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		33702CBB29772F53006F564C /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				33702CBE29772F6C006F564C /* ViewModel */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		33702CBC29772F5E006F564C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				33702CBD29772F65006F564C /* View */,
+				334FCF752984275E000DF40F /* Model */,
+				334FCF6D298426E3000DF40F /* EventsList */,
+				334FCF6C298426DD000DF40F /* AddEvent */,
+				334FCF6B298426D6000DF40F /* Register */,
+				334FCF69298426B5000DF40F /* Login */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -129,9 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				33702CC829772FEC006F564C /* LoginView.swift */,
-				33702CCA29773009006F564C /* RegisterView.swift */,
-				33702CCC2977301A006F564C /* EventsView.swift */,
-				33702CCE29773039006F564C /* NewEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,8 +237,7 @@
 		33702CBE29772F6C006F564C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				33702CC429772FB5006F564C /* AuthenticationViewModel.swift */,
-				33702CC629772FD0006F564C /* EventViewModel.swift */,
+				334FCF7A298427BE000DF40F /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,7 +245,7 @@
 		33702CBF29772F73006F564C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				33702CC229772F95006F564C /* Event.swift */,
+				33702CC229772F95006F564C /* EventResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,10 +321,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				33702CD529773098006F564C /* CustomTextField.swift in Sources */,
-				33702CC329772F95006F564C /* Event.swift in Sources */,
+				334FCF7D29842813000DF40F /* RegisterViewModel.swift in Sources */,
+				334FCF7729842781000DF40F /* EventPresentationModel.swift in Sources */,
+				33702CC329772F95006F564C /* EventResponseModel.swift in Sources */,
 				33702CC929772FEC006F564C /* LoginView.swift in Sources */,
-				33702CC729772FD0006F564C /* EventViewModel.swift in Sources */,
-				33702CC529772FB5006F564C /* AuthenticationViewModel.swift in Sources */,
+				334FCF7F2984289C000DF40F /* AddEventViewModel.swift in Sources */,
+				334FCF8129842978000DF40F /* EventsView-ViewModel.swift in Sources */,
+				334FCF7B298427BE000DF40F /* LoginViewModel.swift in Sources */,
 				33702CCB29773009006F564C /* RegisterView.swift in Sources */,
 				33702CC129772F7F006F564C /* NetworkHelper.swift in Sources */,
 				33702CD12977305A006F564C /* AuthenticationHeaderView.swift in Sources */,

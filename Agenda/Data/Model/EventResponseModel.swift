@@ -33,11 +33,3 @@ struct EventResponseModel: Decodable {
     }
 }
 
-
-struct EventPresentationModel: Identifiable {
-    // el id se genera cada vez que se instancia/crea el modelo, es necesario para el ForEach del LazyVStack ya que SwiftUI así lo requiere
-    let id = UUID()
-    let name: String
-    let date: Int
-}
-

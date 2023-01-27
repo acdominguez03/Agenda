@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AddEventViewModel: ObservableObject {
+class NewEventViewModel: ObservableObject {
     
     
     @Published var onSentNewEvent = false

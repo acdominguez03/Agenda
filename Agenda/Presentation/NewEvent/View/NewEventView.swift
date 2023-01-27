@@ -12,7 +12,7 @@ struct NewEventView: View {
     //MARK: - Variables
     @State var selectedDate: Date = Date()
     @State var nameEvent: String = ""
-    @ObservedObject var viewModel: AddEventViewModel = AddEventViewModel()
+    @ObservedObject var viewModel: NewEventViewModel = NewEventViewModel()
     @Binding var showNewEventView: Bool
     
     var completion: () -> ()
@@ -55,7 +55,7 @@ struct NewEventView: View {
                 .bold()
                 .padding(.horizontal)
                 .padding(.vertical, 8)
-                .background(Color(.systemBlue))
+                .background(Color("CustomColor"))
                 .foregroundColor(.white)
                 .clipShape(Capsule())
         }.padding()

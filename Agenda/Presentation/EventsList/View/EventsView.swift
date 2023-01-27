@@ -24,11 +24,11 @@ struct EventsView: View {
                 addButton
                
             }.navigationTitle(Text("Events"))
+                .background(Color("Background"))
         }
         .onAppear{
             viewModel.getEvents()
         }
-        
         .navigationBarHidden(true)
     }
     
@@ -37,15 +37,18 @@ struct EventsView: View {
         ScrollView {
             LazyVStack(spacing: 1) {
                 ForEach(viewModel.events) { event in
-                    HStack {
-                        Text(event.name)
-                        Spacer()
-                        Text("\(datetimeToString(date: event.date))")
-                    }
-                    .padding(.horizontal, 5)
-                    .frame(height: 40)
-                    .background(Color.white)
-                    .padding(.horizontal, 10)
+                    NavigationLink(destination: EventDetailView(event: event), label: {
+                        HStack {
+                            Text(event.name)
+                            Spacer()
+                            Text("\(datetimeToString(date: event.date))")
+                        }
+                        .padding(.horizontal, 5)
+                        .frame(height: 40)
+                        .background(Color.white)
+                        .padding(.horizontal, 10)
+                        .foregroundColor(.black)
+                    })
                 }
             }
         }
@@ -62,7 +65,7 @@ struct EventsView: View {
                 .frame(width: 20, height: 20)
                 .padding()
         }
-        .background(Color(.systemBlue))
+        .background(Color("CustomColor"))
         .foregroundColor(.white)
         .clipShape(Circle())
         .padding()

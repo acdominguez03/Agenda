@@ -12,6 +12,7 @@
 		334FCF7D29842813000DF40F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF7C29842813000DF40F /* RegisterViewModel.swift */; };
 		334FCF7F2984289C000DF40F /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF7E2984289C000DF40F /* AddEventViewModel.swift */; };
 		334FCF8129842978000DF40F /* EventsView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF8029842978000DF40F /* EventsView-ViewModel.swift */; };
+		334FCF8429843A59000DF40F /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334FCF8329843A59000DF40F /* EventDetailView.swift */; };
 		33702CAC29772EBE006F564C /* AgendaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33702CAB29772EBE006F564C /* AgendaApp.swift */; };
 		33702CB029772EC0006F564C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33702CAF29772EC0006F564C /* Assets.xcassets */; };
 		33702CB329772EC0006F564C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33702CB229772EC0006F564C /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		334FCF7C29842813000DF40F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		334FCF7E2984289C000DF40F /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
 		334FCF8029842978000DF40F /* EventsView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventsView-ViewModel.swift"; sourceTree = "<group>"; };
+		334FCF8329843A59000DF40F /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		33702CA829772EBE006F564C /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33702CAB29772EBE006F564C /* AgendaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaApp.swift; sourceTree = "<group>"; };
 		33702CAF29772EC0006F564C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,13 +85,13 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		334FCF6C298426DD000DF40F /* AddEvent */ = {
+		334FCF6C298426DD000DF40F /* NewEvent */ = {
 			isa = PBXGroup;
 			children = (
 				334FCF7129842715000DF40F /* ViewModel */,
 				334FCF7029842711000DF40F /* View */,
 			);
-			path = AddEvent;
+			path = NewEvent;
 			sourceTree = "<group>";
 		};
 		334FCF6D298426E3000DF40F /* EventsList */ = {
@@ -157,6 +159,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		334FCF8229843A44000DF40F /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF8529843B53000DF40F /* View */,
+			);
+			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		334FCF8529843B53000DF40F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				334FCF8329843A59000DF40F /* EventDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		33702C9F29772EBE006F564C = {
 			isa = PBXGroup;
 			children = (
@@ -218,8 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				334FCF752984275E000DF40F /* Model */,
+				334FCF8229843A44000DF40F /* EventDetail */,
 				334FCF6D298426E3000DF40F /* EventsList */,
-				334FCF6C298426DD000DF40F /* AddEvent */,
+				334FCF6C298426DD000DF40F /* NewEvent */,
 				334FCF6B298426D6000DF40F /* Register */,
 				334FCF69298426B5000DF40F /* Login */,
 			);
@@ -320,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334FCF8429843A59000DF40F /* EventDetailView.swift in Sources */,
 				33702CD529773098006F564C /* CustomTextField.swift in Sources */,
 				334FCF7D29842813000DF40F /* RegisterViewModel.swift in Sources */,
 				334FCF7729842781000DF40F /* EventPresentationModel.swift in Sources */,
